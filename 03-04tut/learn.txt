@@ -1,0 +1,15 @@
+◈ npm nodemon: npm run dev
+
+◈ npm init: create package.json
+
+◈ npm i date-fns: date dependency
+
+◈ node_moduels can get very large. don't want to include that in git.
+so use .gitignore
+
+◈ node_moduels add dependency: "npm i nodemon -D(--save-dev)"
+
+◈ npm rm nodemon -D(non dependencyf)
+
+
+### EVENT EMITTER ###

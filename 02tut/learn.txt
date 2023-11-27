@@ -1,0 +1,9 @@
+
+◈ node is a asynchronous but single thread. if one event is taking long
+time, it can make the whole server slow.
+Worst for Node.js:  처리작업이 CPU를 많이 소모 or 대용량 파일 처리 작업
+but IO작업이 별로 없는 앱, 단위적업 고성능 보장.
+- synchronous: one by one
+
+
+pipe(): efficent way to read stream, write stream
