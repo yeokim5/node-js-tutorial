@@ -1,0 +1,45 @@
+◈ npm i express
+- res.send("Hello World");
+- 1 way : res.sendFile("./views/index.html", { root: __dirname });
+- 2 way : res.sendFile(path.join(__dirname, 'views', 'index.html'));
+
+
+◈ For root level page
+app.get("^/$|/new-page(.html)?", (req, res) => {}
+^: start // $: end // |: or // (.html)? : option
+
+◈ Rediret
+res.redirect(301, "/new-page.html"); //302 by default
+
+◈ next() : move to next respond
+
+◈ chain next(): app.get("/chain(.html)?", [one, two, three]);
+
+
+################# Chapter 7 Middleware ################# 
+◈ Custom middleware logger: logger in middleware folder
+- middleware? handle task of request&response
+- how to use? app.use((req,res,next))
+
+
+◈ Cross Origin Resource Sharing
+- security feature, important to implement
+- how to use? 
+        > make a whitelist
+        > set corsOptions: if whitelist or no-origin
+        > app.use(cors(corsOptions))
+
+◈ Error handling
+- app.all(*): catch all other link
+- res.status(404): set HTTP status to 404
+- sendFile(): give response to HTTP request with sendFile
+
+
+################# Chapter 8 Routing ################# 
+
+express modern: support regex in app.use()
+thunder client: test api
+
+################# Chapter 9 MVC ################# 
+controllers: 
+config folder: put cors
