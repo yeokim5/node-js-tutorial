@@ -41,5 +41,35 @@ express modern: support regex in app.use()
 thunder client: test api
 
 ################# Chapter 9 MVC ################# 
-controllers: 
-config folder: put cors
+>>> Model:
+- Represents the application's data and business logic.
+- Manages the data, logic, and rules of the application.
+- Notifies the View of any changes in the data, so the View can update accordingly.
+
+>>> View:
+- Represents the user interface (UI) and presentation of the application.
+- Displays the data from the Model to the user.
+- Sends user input to the Controller for processing.
+
+>>> Controller:
+- Acts as an intermediary between the Model and the View.
+- Handles user input and updates the Model and View accordingly.
+- Contains the application's logic for processing and responding to user actions.
+
+
+################# Chapter 10 Authentication #################
+>>> Make User with Bycrypt
+1. Get Request: {user: "ff", pwd"ff"} post sent
+
+2. Handle Router: server.js => app.use("/register) 설정
+3. Handle Post: register.js => post.router 설정 => when post on root, handle user
+4. Handle Controller: registerController.js => usersDB: users.json 확인 => setUser 메서드
+5. Handle mehtod:handleNewUser async function: => destruct {user, pwd} with reqest body => check edge case: exist&duplicate
+6. Input Data: encrypt -> make new user -> setUser([...userDB.users, newUser]); -> writeFile on usersDB
+
+
+
+################# Chapter 11 JWT(JSON web tocken) #################
+access token = short time
+refresh token = long time
+haxards: XSS(cross-site scripting) and CSRF(CS Request Forgery)
