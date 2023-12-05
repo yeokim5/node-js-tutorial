@@ -1,0 +1,16 @@
+◈ npm i express
+- res.send("Hello World");
+- 1 way : res.sendFile("./views/index.html", { root: __dirname });
+- 2 way : res.sendFile(path.join(__dirname, 'views', 'index.html'));
+
+
+◈ For root level page
+app.get("^/$|/new-page(.html)?", (req, res) => {}
+^: start // $: end // |: or // (.html)? : option
+
+◈ Rediret
+res.redirect(301, "/new-page.html"); //302 by default
+
+◈ next() : move to next respond
+
+◈ chain next(): app.get("/chain(.html)?", [one, two, three]);
